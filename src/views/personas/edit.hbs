@@ -1,0 +1,72 @@
+<div class="container p-4" style="background-color: #f5dee9; min-height: 90vh; max-width: 2000px;">
+    <!-- Contenedor principal con fondo oscuro y relleno -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Tarjeta estilizada con bordes redondeados y sombra -->
+            <div class="card shadow-lg" style="border-radius: 10px; overflow: hidden; background-color: #1a1c23;">
+                <!-- Encabezado con fondo cálido y texto blanco -->
+                <div class="card-header text-white text-center" style="background-color: #8a567f;">
+                    <h3 class="text-uppercase p-3">Editar Datos</h3>
+                </div>
+                <!-- Cuerpo del formulario -->
+                <div class="card-body">
+                    <form action="/edit/{{persona.id}}" method="post">
+                        <!-- Nombre -->
+                        <div class="input-group mt-3">
+                            <label for="name" class="input-group-text" style="background-color: #1b95a5; color: white;">Nombre</label>
+                            <input class="form-control" 
+                                   type="text" 
+                                   name="name" 
+                                   id="name" 
+                                   value="{{persona.name}}" 
+                                   placeholder="Ejemplo: Luis Angel" 
+                                   autofocus 
+                                   required>
+                        </div>
+                        <!-- Apellido -->
+                        <div class="input-group mt-3">
+                            <label for="lastname" class="input-group-text" style="background-color: #1b95a5; color: white;">Apellido</label>
+                            <input class="form-control" 
+                                   type="text" 
+                                   name="lastname" 
+                                   id="lastname" 
+                                   value="{{persona.lastname}}" 
+                                   placeholder="Ejemplo: Fernández" 
+                                   required>
+                        </div>
+                        <!-- Edad -->
+                        <div class="input-group mt-3">
+                            <label for="age" class="input-group-text" style="background-color: #1b95a5; color: white;">Edad</label>
+                            <input class="form-control" 
+                                   type="number" 
+                                   name="age" 
+                                   id="age" 
+                                   value="{{persona.age}}" 
+                                   placeholder="0" 
+                                   required>
+                        </div>
+                        <!-- Botón para enviar el formulario -->
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-lg text-uppercase" 
+                                    style="background-color: #467dc4; color: white; border-radius: 10px;">
+                                Actualizar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
+<!-- Footer estilizado -->
+<footer style="background-color: #120d13; color: white; padding: 20px; text-align: center; margin-top: 0px;">
+    <p style="margin: 0; font-size: 16px;">
+        © 2024 Netdatos. Todos los derechos reservados.
+    </p>
+    <p style="margin: 5px 0;">
+        <a href="/privacy" style="color: #f5dee9; text-decoration: none; margin-right: 10px;">Política de Privacidad</a>
+        |
+        <a href="/terms" style="color: #f5dee9; text-decoration: none; margin-left: 10px;">Términos y Condiciones</a>
+    </p>
+</footer>

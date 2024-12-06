@@ -1,0 +1,51 @@
+<div class="container p-4" style="background-color: #f5dee9; min-height: 90vh;  max-width: 2000px;">
+    <!-- Contenedor principal con fondo claro -->
+    <div class="row justify-content-center">
+        <!-- Centrado horizontalmente en pantallas medianas -->
+        <div class="col-md-6">
+            <!-- Tarjeta con sombra, bordes redondeados y estilo moderno -->
+            <div class="card shadow-lg" style="border-radius: 7px; overflow: hidden; background-color: #0d0f14;">
+                <!-- Encabezado con color morado oscuro y texto blanco -->
+                <div class="card-header text-center text-white" style="background-color: #8a567f;">
+                    <h3 class="text-uppercase p-3">Crear Nuevo Registro</h3>
+                </div>
+                <!-- Cuerpo del formulario -->
+                <div class="card-body">
+                    <form action="/add" method="post">
+                        <!-- Nombre -->
+                        <div class="input-group mt-3">
+                            <label for="name" class="input-group-text" style="background-color: #1b95a5; color: white;">Nombre</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Luis Ángel" autofocus required>
+                        </div>
+                        <!-- Apellido -->
+                        <div class="input-group mt-3">
+                            <label for="lastname" class="input-group-text" style="background-color: #1b95a5; color: white;">Apellido</label>
+                            <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Fernández" required>
+                        </div>
+                        <!-- Edad -->
+                        <div class="input-group mt-3">
+                            <label for="age" class="input-group-text" style="background-color: #1b95a5; color: white;">Edad</label>
+                            <input class="form-control" type="number" name="age" id="age" placeholder="0" required>
+                        </div>
+                        <!-- Botón de envío estilizado -->
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn text-uppercase text-white px-5 py-3" style="background-color: #467dc4; border-radius: 10px; font-size: 18px; transition: transform 0.3s;">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer estilizado -->
+<footer style="background-color: #120d13; color: white; padding: 20px; text-align: center; margin-top: 0px;">
+    <p style="margin: 0; font-size: 16px;">
+        © 2024 Netdatos. Todos los derechos reservados.
+    </p>
+    <p style="margin: 5px 0;">
+        <a href="/privacy" style="color: #f5dee9; text-decoration: none; margin-right: 10px;">Política de Privacidad</a>
+        |
+        <a href="/terms" style="color: #f5dee9; text-decoration: none; margin-left: 10px;">Términos y Condiciones</a>
+    </p>
+</footer>

@@ -1,0 +1,69 @@
+<div class="container p-4" style="background-color: #f5dee9; min-height: 90vh; padding: 25px; max-width: 2000px;">
+    <!-- Contenedor principal con fondo oscuro -->
+    <div class="row mt-5">
+        <!-- Título centrado y estilizado -->
+        <h3 class="text-center text-uppercase p-3" style="color: #232327; ">Lista de personas</h3>
+
+        {{#if personas}}
+        <!-- Tabla estilizada para mostrar la lista de personas -->
+        <table class="table table-bordered text-center" style="color: #1e1e22; border-color: #1e1e22">
+            <thead>
+                <tr style="background-color: #8a567f; color: white;">
+                    <th scope="col" class="col-4">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each personas}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{lastname}}</td>
+                    <td>{{age}}</td>
+                    <td>
+                        <!-- Grupo de botones con iconos -->
+                        <div class="btn-group">
+                            <a href="/edit/{{id}}" class="btn btn-warning p-2">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <a href="/delete/{{id}}" class="btn btn-danger p-2">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <tfoot>
+                <tr style="background-color: #8a567f; color: white;">
+                    <td colspan="4">REGISTRO DE PERSONAS</td>
+                </tr>
+            </tfoot>
+        </table>
+        {{else}}
+        <!-- Mensaje cuando no hay personas registradas -->
+        <div class="card text-center mx-auto shadow-lg" style="width: 350px; border-radius: 10px; overflow: hidden; background-color: #1a1c23;">
+            <div class="card-header text-white" style="background-color: #8a2294;">
+                <h3>Debes crear una persona</h3>
+            </div>
+            <div class="card-body">
+                <p style="color: #17171b;">Presiona este botón para que puedas registrar a una persona en la aplicación</p>
+                <a href="#" class="btn btn-primary" style="background-color: #6a528a; border-radius: 10px;">Ir a crear</a>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+
+   <!-- Footer -->
+<footer style="background-color: #100911; color: white; padding: 20px; text-align: center; margin-top: 0px;">
+    <p style="margin: 0; font-size: 16px;">
+        © 2024 Netdatos. Todos los derechos reservados.
+    </p>
+    <p style="margin: 5px 0;">
+        <a href="/privacy" style="color: #f5dee9; text-decoration: none; margin-right: 10px;">Política de Privacidad</a>
+        |
+        <a href="/terms" style="color: #f5dee9; text-decoration: none; margin-left: 10px;">Términos y Condiciones</a>
+    </p>
+</footer>

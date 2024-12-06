@@ -73,30 +73,6 @@ Bootstrap 5: Framework de diseño frontend para una interfaz moderna y responsiv
 Manillar: Motor de plantillas para generar vistas dinámicas.
 Base de datos
 MySQL: Base de datos relacionales para almacenar usuarios y registros de personas.
-Estructura del proyecto
-intento
-proyecto_node.js/
-│
-├── src/
-│   ├── config/              # Configuración de la base de datos y variables de entorno
-│   ├── routes/              # Rutas de la aplicación (personas y autenticación)
-│   │   ├── personas.routes.js
-│   │   ├── auth.routes.js
-│   ├── views/               # Plantillas Handlebars para las vistas
-│   │   ├── layouts/         # Layout principal
-│   │   ├── partials/        # Fragmentos reutilizables (como la barra de navegación)
-│   │   ├── index.hbs        # Página principal
-│   │   ├── login.hbs        # Página de inicio de sesión
-│   │   ├── register.hbs     # Página de registro
-│   │   ├── list.hbs         # Página para listar personas
-│   │   └── add.hbs          # Página para agregar personas
-│   ├── public/              # Archivos estáticos (CSS, JS, imágenes)
-│   ├── database.js          # Configuración de la conexión a MySQL
-│   ├── index.js             # Archivo principal que inicia la aplicación
-│
-├── .env                     # Variables de entorno
-├── package.json             # Dependencias y scripts de NPM
-└── README.md                # Documentación del proyecto
 Instalación
 Clonar el repositorio:
 git clone https://github.com/usuario/proyecto-node-gestor-personas.git
